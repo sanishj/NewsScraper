@@ -1,0 +1,29 @@
+{
+  "name": "newsscraper",
+  "version": "1.0.0",
+  "description": "a web app that lets users view and leave comments on the latest news",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanishj/NewsScraper.git"
+  },
+  "author": "Sanish John",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sanishj/NewsScraper/issues"
+  },
+  "homepage": "https://github.com/sanishj/NewsScraper#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "mongojs": "^2.4.1",
+    "mongoose": "^4.11.12",
+    "path": "^0.12.7",
+    "request": "^2.81.0"
+  }
+}
