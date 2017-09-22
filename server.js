@@ -5,6 +5,11 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var request = require("request");
 var cheerio = require("cheerio");
+//exports
+var userNote = require("./models/userNote.js");
+var newsArticle = require("./models/newsArticle.js");
+
+
 // Mongoose Promise
 mongoose.Promise = Promise;
 
