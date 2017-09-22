@@ -107,6 +107,6 @@ app.post("/articles/:id", function (req, res) {
 //PORT
 var port = process.env.PORT || 3000;
 app.listen(port, function () {
-  console.log("App running on port:", port);
-  console.log("CTRL+C to end or kill server");
+  console.log(`App running on port:`, port);
+  console.log(`CTRL+C to end or kill server`);
 });
