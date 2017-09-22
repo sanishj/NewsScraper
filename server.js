@@ -6,8 +6,8 @@ var mongoose = require("mongoose");
 var request = require("request");
 var cheerio = require("cheerio");
 //exports
-var userNote = require("./models/userNote.js");
-var newsArticle = require("./models/newsArticle.js");
+var userNotes = require("./models/userNotes.js");
+var newsArticles = require("./models/newsArticles.js");
 
 
 // Mongoose Promise
@@ -42,7 +42,6 @@ db.once("open", function () {
 app.get("/scrape", function (req, res) {
   request("https://www.nytimes.com/", function (error, response, html) {
     var $ = cheerio.load(html);
-
     $("article h2").each(function (i, element) {
       var result = {};
       result.title = $(this).children("a").text();
@@ -61,7 +60,49 @@ app.get("/scrape", function (req, res) {
   res.redirect("/");
 });
 
+app.get("/articles", function (req, res) {
+  Article.find({}, function (error, doc) {
+    if (error) {
+      console.log(error);
+    }
+    else {
+      res.json(doc);
+    }
+  });
+});
 
+app.get("/articles/:id", function (req, res) {
+  Article.findOne({ "_id": req.params.id })
+    .populate("note")
+    .exec(function (error, doc) {
+      if (error) {
+        console.log(error);
+      }
+      else {
+        res.json(doc);
+      }
+    });
+});
+
+app.post("/articles/:id", function (req, res) {
+  var newNote = new Note(req.body);
+  newNote.save(function (error, doc) {
+    if (error) {
+      console.log(error);
+    }
+    else {
+      Article.findOneAndUpdate({ "_id": req.params.id }, { "note": doc._id })
+        .exec(function (err, doc) {
+          if (err) {
+            console.log(err);
+          }
+          else {
+            res.send(doc);
+          }
+        });
+    }
+  });
+});
 
 //PORT
 var port = process.env.PORT || 3000;
