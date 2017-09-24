@@ -41,18 +41,18 @@ a:hover {
 }
 
 #wrapper {
-    width: 960px;
+    /* width: 960px; */
     margin-left: auto;
     margin-right: auto;
     padding-top: 5%;
 }
 
-#articles {
+/* #articles {
     display: inline-block;
     overflow: auto;
     width: 60%;
     height: 700px;
-}
+} */
 
 #notes {
     float: right;
@@ -78,5 +78,5 @@ textarea {
 
 .card {
     box-shadow: -5px 10px 10px #888888;
-    height: 250px;
+    /* height: 250px; */
 }
