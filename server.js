@@ -6,8 +6,8 @@ var mongoose = require("mongoose");
 var request = require("request");
 var cheerio = require("cheerio");
 //notes
-var userNotes = require("./models/userNotes.js");
-var newsArticles = require("./models/newsArticles.js");
+var Note = require("./models/userNotes.js");
+var Article = require("./models/newsArticles.js");
 
 
 // Mongoose Promise
@@ -47,6 +47,7 @@ app.get("/scrape", function (req, res) {
       result.title = $(this).children("a").text();
       result.link = $(this).children("a").attr("href");
       var entry = new Article(result);
+      // console.log(entry);
       entry.save(function (err, doc) {
         if (err) {
           console.log(err);
@@ -103,6 +104,7 @@ app.post("/articles/:id", function (req, res) {
     }
   });
 });
+
 
 //PORT
 const port = process.env.PORT || 3000;
