@@ -29,54 +29,25 @@ a {
     font-size: 16px;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px
-}
-
 a:focus,
 a:hover {
     color: #fcbd20
 }
 
 #wrapper {
-    /* width: 960px; */
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 5%;
 }
-
-/* #articles {
-    display: inline-block;
-    overflow: auto;
-    width: 60%;
-    height: 700px;
-} */
 
 #notes {
     float: right;
     width: 30%;
 }
 
-textarea,
-input {
-    display: block;
-    width: 100%;
-    background-color: #FCF5C7;
-}
 
-input {
-    height: 36px;
-    font-size: 24px;
-}
-
-textarea {
-    height: 200px;
-    font-size: 18px;
-}
-
-.card {
+.card, .jumbotron {
     box-shadow: -5px 10px 10px #888888;
     /* height: 250px; */
 }
