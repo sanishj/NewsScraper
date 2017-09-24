@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/mongoose-webscraper" || "heroku");
+mongoose.connect("mongodb://localhost/technews-webscraper" || "heroku");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -40,14 +40,13 @@ db.once("open", function () {
 // Routes
 // ======
 app.get("/scrape", function (req, res) {
-  request("https://www.nytimes.com/", function (error, response, html) {
+  request("https://www.nytimes.com/section/technology?mcubz=1", function (error, response, html) {
     var $ = cheerio.load(html);
     $("article h2").each(function (i, element) {
       var result = {};
       result.title = $(this).children("a").text();
       result.link = $(this).children("a").attr("href");
       var entry = new Article(result);
-      // console.log(entry);
       entry.save(function (err, doc) {
         if (err) {
           console.log(err);

@@ -3,11 +3,14 @@ $.getJSON("/articles", function (data) {
     // picking up 20 articles from page
     console.log(data);
     for (var i = 0; i < 20; i++) {
-        $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>" + "<hr>");
+        $("#articles").append("<p data-id='" + 
+        data[i]._id + "'>" + 
+        data[i].title + "<br />" + 
+        data[i].link + "</p>" + "<hr>");
     }
 });
 
-/*
+
 // P tag click
 $(document).on("click", "p", function () {
     $("#notes").empty();
@@ -47,4 +50,3 @@ $(document).on("click", "#savenote", function () {
     $("#titleinput").val("");
     $("#bodyinput").val("");
 });
-*/
