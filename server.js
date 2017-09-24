@@ -5,7 +5,7 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var request = require("request");
 var cheerio = require("cheerio");
-//exports
+//notes
 var userNotes = require("./models/userNotes.js");
 var newsArticles = require("./models/newsArticles.js");
 
@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/week18day3mongoose");
+mongoose.connect("mongodb://localhost/mongoose-webscraper" || "heroku");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -105,7 +105,7 @@ app.post("/articles/:id", function (req, res) {
 });
 
 //PORT
-var port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, function () {
   console.log(`App running on port:`, port);
   console.log(`CTRL+C to end or kill server`);

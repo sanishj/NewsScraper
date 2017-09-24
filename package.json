@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/sanishj/NewsScraper#readme",
   "dependencies": {
-    "body-parser": "^1.18.1",
+    "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.15.4",
     "express-handlebars": "^3.0.0",
