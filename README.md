@@ -20,6 +20,13 @@ This is a web app that lets users view and leave comments on the latest news.You
 ## Screenshots
 
 Screenshot 01. 
-![Image](https://github.com/sanishj/bamazon/blob/master/screenshots/liveQueryFromDB.JPG)
+![Image](https://github.com/sanishj/NewsScraper/blob/master/public/screenshots/App_SS_01.JPG)
 
-Screenshot 02. 
+Screenshot 02.
+![Image](https://github.com/sanishj/NewsScraper/blob/master/public/screenshots/App_SS_02.JPG)
+
+Screenshot 03.
+![Image](https://github.com/sanishj/NewsScraper/blob/master/public/screenshots/App_SS_03.JPG)
+
+Screenshot 04.
+![Image](https://github.com/sanishj/NewsScraper/blob/master/public/screenshots/App_SS_04.JPG)
