@@ -3,10 +3,10 @@ $.getJSON("/articles", function (data) {
     // picking up 20 articles from page
     console.log(data);
     for (var i = 0; i < 20; i++) {
-        $("#articles").append("<p data-id='" + 
-        data[i]._id + "'>" + 
-        data[i].title + "<br />" + 
-        data[i].link + "</p>" + "<hr>");
+        $("#articles").append("<p data-id='" +
+            data[i]._id + "'>" +
+            data[i].title + `<i class="fa fa-arrow-circle-right" aria-hidden="true"> Add a note!<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></i><br />` +
+            data[i].link + "</p>" + "<hr>");
     }
 });
 
@@ -21,10 +21,15 @@ $(document).on("click", "p", function () {
     })
         .done(function (data) {
             console.log(data);
-            $("#notes").append("<h4>" + data.title + "</h4>");
-            $("#notes").append("<input id='titleinput' name='title' size='55' placeholder='Insert Title'>");
-            $("#notes").append("<textarea id='bodyinput' name='body' rows='5' cols='56' placeholder='Write Your Note'></textarea>");
-            $("#notes").append(" <button data-id='" + data._id + "' id='savenote' class='btn btn-success'>Save Note</button>");
+            $("#notes").append("<div><h4>" + data.title + "</h4>");
+            $("#notes").append(`<div class="form-group">
+            <label for="formGroupExampleInput">Insert Title</label>
+            <input type="text" class="form-control" id="titleinput" placeholder="Insert Title"></div>
+            <div class="form-group">
+            <label for="formGroupExampleInput2">Write Your Note</label>
+            <input type="text" class="form-control" id="bodyinput" rows='5' cols='56' placeholder="Write Your Note">
+            </div>`);
+            $("#notes").append(" <button data-id='" + data._id + "' id='savenote' class='btn btn-success'>Save Note</button></div>");
             if (data.note) {
                 $("#titleinput").val(data.note.title);
                 $("#bodyinput").val(data.note.body);

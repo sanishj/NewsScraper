@@ -21,7 +21,7 @@
             <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-secondary"><i class="fa fa-home" aria-hidden="true" href="/"> Home</i></button>
                 <button type="button" class="btn btn-secondary"><i class="fa fa-floppy-o" aria-hidden="true" href="/saved"> Saved</i></button>
-                <button type="button" class="btn btn-secondary" id><i class="fa fa-paper-plane" aria-hidden="true"> Scrape</i></button>
+                <button type="button" class="btn btn-secondary" id="scrape-button"><a href="/scrape"><i class="fa fa-paper-plane" aria-hidden="true"> Scrape</i></a></button>
             </div>
         </div>
     </nav>
@@ -54,10 +54,10 @@
                     <div class="panel panel-primary">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Tech News: New YorkTimes</h4>
+                                <h4 class="card-title">Notes</h4>
                             </div>
                             <div class="card-block">
-
+                                <div id="notes"></div>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,6 @@
                 </footer>
             </div>
         </div>
-        <div id="notes" class="col-md-5"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
