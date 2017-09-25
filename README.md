@@ -16,3 +16,10 @@ This is a web app that lets users view and leave comments on the latest news.You
     ```
     node server.js
     ```
+
+## Screenshots
+
+Screenshot 01. 
+![Image](https://github.com/sanishj/bamazon/blob/master/screenshots/liveQueryFromDB.JPG)
+
+Screenshot 02. 
