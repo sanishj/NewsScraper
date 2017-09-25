@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/technews-webscraper" || "heroku");
+mongoose.connect("mongodb://localhost/technews-webscraper" || "mongodb://heroku_lb12klbr:tj5rvmjm2g1g85gjc6ps1950mb@ds149724.mlab.com:49724/heroku_lb12klbr");
 var db = mongoose.connection;
 
 // Show any mongoose errors

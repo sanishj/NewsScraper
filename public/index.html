@@ -10,22 +10,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>News Scraper</title>
 </head>
 
 <body>
     <nav class="navbar sticky-top bg-primary">
-        <div class="d-flex flex-row">
-            <div class="p-2"> <button type="button" class="btn btn-secondary">Left</button></div>
-            <div class="p-2"><button type="button" class="btn btn-secondary">Left</button></div>
-            <div class="p-2"><button type="button" class="btn btn-secondary">Left</button></div>
+        <div class="d-flex flex-row-reverse">
+            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary"><i class="fa fa-home" aria-hidden="true" href="/"> Home</i></button>
+                <button type="button" class="btn btn-secondary"><i class="fa fa-floppy-o" aria-hidden="true" href="/saved"> Saved</i></button>
+                <button type="button" class="btn btn-secondary" id><i class="fa fa-paper-plane" aria-hidden="true"> Scrape</i></button>
+            </div>
         </div>
     </nav>
 
     <div id="wrapper">
         <div class="jumbotron jumbotron-fluid">
             <div class="container-fluid">
-                <h1 class="display-3">Tech News WebScraper</h1>
+                <h1 class="display-3"><i class="fa fa-newspaper-o" aria-hidden="true"></i>Tech News WebScraper</h1>
                 <p class="lead">This is a web app that lets users view and leave comments on the latest news.You're not actually writing
                     any articles; instead, with the help of great technologies like Mongoose and Cheerio the app scrapes
                     news from another site.</p>
@@ -58,6 +62,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- Footer Section -->
+            <div class="col-md-12 text-center jumbotron">
+                <footer class="footer">
+                    <p>&copy; 2017 Sanish John</p>
+                    <div class="icons">
+                        <a href="https://github.com/sanishj" target="_blank"><i style="font-size:24px" class="fa">&#xf09b;</i></a>
+                        <a href="https://www.linkedin.com/in/sanishjohn/" target="_blank"><i style="font-size:24px" class="fa">&#xf08c;</i></a>
+                        <a href="https://stackexchange.com/users/10555759/sanishj" target="_blank"><i style="font-size:24px" class="fa">&#xf16c;</i></a>
+                        <a href="https://twitter.com/sanishj" target="_blank"><i style="font-size:24px" class="fa">&#xf099;</i></a>
+                    </div>
+                </footer>
             </div>
         </div>
         <div id="notes" class="col-md-5"></div>

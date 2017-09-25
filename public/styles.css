@@ -21,19 +21,6 @@ h6 {
     letter-spacing: 1px
 }
 
-a {
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-    color: #fdcc52;
-    font-size: 16px;
-}
-
-a:focus,
-a:hover {
-    color: #fcbd20
-}
-
 #wrapper {
     width: 90%;
     margin-left: auto;
@@ -50,4 +37,9 @@ a:hover {
 .card, .jumbotron {
     box-shadow: -5px 10px 10px #888888;
     /* height: 250px; */
+}
+
+.fa {
+    padding: 10px;
+    color: black;
 }
