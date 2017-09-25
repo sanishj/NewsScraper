@@ -10,29 +10,12 @@ body {
     webkit-tap-highlight-color: #222;
 }
 
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: Catamaran, Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    letter-spacing: 1px
-} */
-
 #wrapper {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 5%;
 }
-
-/* #notes {
-    float: right;
-    width: 30%;
-} */
-
 
 .card, .jumbotron {
     box-shadow: -5px 10px 10px #888888;
